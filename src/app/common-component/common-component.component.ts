@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Myservice } from '../myservice.service';
 import { Observable } from 'rxjs';
 import { Http, Response } from '@angular/http';
+//import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-common-component',
@@ -12,7 +13,8 @@ import { Http, Response } from '@angular/http';
 export class CommonComponentComponent {
   data: any = [];
   header: any = [];
-  constructor(private _myservice: Myservice) {
+  constructor(public _myservice: Myservice) {
+  //alert(this._url.jsonURL);
   this.getRecrods();
   }
   getRecrods() {

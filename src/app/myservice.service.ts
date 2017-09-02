@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 
 export class Myservice {
   response: any;
-  constructor(private _http: Http) { }
+  constructor(public _http: Http) { }
   getValues(): Observable<any> {
     return this._http.get('./assets/data/CountryList.json')
       .map(response => response.json());
