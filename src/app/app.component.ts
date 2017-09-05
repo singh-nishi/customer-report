@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { SampleComponent } from 'dynamic-grid';
+import { Http, Response } from '@angular/http';
+
 @Component({
-  selector: 'app-common-component',
-  templateUrl: './common-component/common-component.component.html',
-  styleUrls: ['./common-component/common-component.component.css'],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  constructor( ) {
-  }
- //public jsonURL:"Hello";
+   data: any = [];
+   constructor(private dyComponent: SampleComponent) {
+    this.dyComponent.getRecrods();
+   }
+  title = 'app';
+
 }
-
-
-

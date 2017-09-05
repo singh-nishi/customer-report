@@ -1,21 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { Component } from '@angular/core';
-import { Myservice } from './myservice.service';
-import { HttpModule } from '@angular/http';
-import { CommonComponentComponent } from './common-component/common-component.component';
+
+import { SampleComponent } from 'dynamic-grid';
+import { SampleService } from 'dynamic-grid';
+import { SampleModule } from 'dynamic-grid';
+
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CommonComponentComponent
+    AppComponent
+    
   ],
   imports: [
-    BrowserModule,HttpModule
-  ],
-  providers: [Myservice],
-  bootstrap: [CommonComponentComponent]
-})
-export class AppModule {
- }
+    BrowserModule,HttpModule,
+    SampleModule
+    ],
+  providers: [SampleService, SampleComponent],
+  bootstrap: [AppComponent]
+ })
+export class AppModule { 
+
+}
