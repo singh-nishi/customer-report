@@ -34,11 +34,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Install package
 npm install dynamic-grid --save
 
-## import app.module.ts
-Component, Service, Module
+## import class of package in app.module.ts file
+import { SampleComponent, SampleService, SampleModule } from 'dynamic-grid';
 
-## import app.component.ts
-Component, Service
+## import class of package in app.component.ts file
+import { SampleComponent,SampleService } from 'dynamic-grid';
 
 add two property in constructor(Component, Service)
 pass jsonURL to dynamic-grid package. After that package will be shown dynamic table
