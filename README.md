@@ -26,3 +26,30 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+## HOW TO USE PACKAGE
+
+## Install package
+npm install dynamic-grid --save
+
+## import app.module.ts
+Component, Service, Module
+
+## import app.component.ts
+Component, Service
+
+add two property in constructor(Component, Service)
+pass jsonURL to dynamic-grid package. After that package will be shown dynamic table
+
+## app.component.html
+add package root
+<sample-component>
+</sample-component>  
+
+
+
+
+
+

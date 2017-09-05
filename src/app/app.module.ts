@@ -2,16 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-import { SampleComponent } from 'dynamic-grid';
-import { SampleService } from 'dynamic-grid';
-import { SampleModule } from 'dynamic-grid';
-
+import { SampleComponent, SampleService, SampleModule } from 'dynamic-grid';
 import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent
-    
   ],
   imports: [
     BrowserModule,HttpModule,
@@ -20,6 +16,5 @@ import {HttpModule} from '@angular/http';
   providers: [SampleService, SampleComponent],
   bootstrap: [AppComponent]
  })
-export class AppModule { 
-
+export class AppModule {
 }

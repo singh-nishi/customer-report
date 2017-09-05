@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { SampleComponent } from 'dynamic-grid';
+import { SampleComponent,SampleService } from 'dynamic-grid';
 import { Http, Response } from '@angular/http';
 
 @Component({
@@ -11,9 +11,10 @@ import { Http, Response } from '@angular/http';
 
 export class AppComponent {
    data: any = [];
-   constructor(private dyComponent: SampleComponent) {
-    this.dyComponent.getRecrods();
+   customURL:string;
+   constructor(private dyComponent: SampleComponent,private _service: SampleService) {
+   _service.jsonURL="https://restcountries.eu/rest/v2/all";
+    this.dyComponent.getRecrods(_service.jsonURL);
    }
   title = 'app';
-
 }
